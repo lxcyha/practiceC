@@ -44,7 +44,6 @@ class TestClient {
         }
     }
 
-
 private:
     std::unique_ptr<testService::Stub> stub_;
 };
@@ -53,11 +52,7 @@ int main(int argc, char** argv) {
     TestClient client(grpc::CreateChannel("0.0.0.0:50051", grpc::InsecureChannelCredentials()));
 
     int reply = client.TestGrpc(2);
-    
 
-//
-//    std::string reply3 = liveanalysis.AddInputSource(3,"rtmp://live.mudu.tv/watch/nnb3d4");
-//    
     std::cout << reply << std::endl;
 
   return 0;

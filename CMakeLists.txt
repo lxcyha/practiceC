@@ -72,7 +72,7 @@ elseif (UNIX AND NOT APPLE)
             protobuf::libprotobuf)
 endif (UNIX AND APPLE)
 
-# Building live-analysis server
+# Building client
 set(CLIENT_DEMO client_demo)
 
 add_executable(${CLIENT_DEMO}
