@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test;
+
+
+
+
+message Request {
+    int32 param = 1;
+}
+
+message Reply {
+    int32 result = 1;
+}
+
+service testService{
+    rpc TestGrpc(Request) returns (Reply) {}
+}
+

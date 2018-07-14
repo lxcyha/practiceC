@@ -1,0 +1,3 @@
+/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles/testGrpc.dir
