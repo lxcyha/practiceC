@@ -52,7 +52,7 @@ set(SOURCES
         main.cpp
         )
 
-# Building live-analysis server
+# Building server
 
 add_executable(${PROJECT_NAME}
         ${HEADERS}
