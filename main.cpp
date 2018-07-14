@@ -2,7 +2,7 @@
 #include <memory>
 #include <string>
 #include <grpc++/grpc++.h>
-#include "test.grpc.pb.h"
+#include "protos/test.grpc.pb.h"
 
 
 using grpc::Status;
