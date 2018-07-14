@@ -150,6 +150,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+proto-src/test.grpc.pb.o: proto-src/test.grpc.pb.cc.o
+
+.PHONY : proto-src/test.grpc.pb.o
+
+# target to build an object file
+proto-src/test.grpc.pb.cc.o:
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o
+.PHONY : proto-src/test.grpc.pb.cc.o
+
+proto-src/test.grpc.pb.i: proto-src/test.grpc.pb.cc.i
+
+.PHONY : proto-src/test.grpc.pb.i
+
+# target to preprocess a source file
+proto-src/test.grpc.pb.cc.i:
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.i
+.PHONY : proto-src/test.grpc.pb.cc.i
+
+proto-src/test.grpc.pb.s: proto-src/test.grpc.pb.cc.s
+
+.PHONY : proto-src/test.grpc.pb.s
+
+# target to generate assembly for a file
+proto-src/test.grpc.pb.cc.s:
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.s
+.PHONY : proto-src/test.grpc.pb.cc.s
+
+proto-src/test.pb.o: proto-src/test.pb.cc.o
+
+.PHONY : proto-src/test.pb.o
+
+# target to build an object file
+proto-src/test.pb.cc.o:
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o
+.PHONY : proto-src/test.pb.cc.o
+
+proto-src/test.pb.i: proto-src/test.pb.cc.i
+
+.PHONY : proto-src/test.pb.i
+
+# target to preprocess a source file
+proto-src/test.pb.cc.i:
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.i
+.PHONY : proto-src/test.pb.cc.i
+
+proto-src/test.pb.s: proto-src/test.pb.cc.s
+
+.PHONY : proto-src/test.pb.s
+
+# target to generate assembly for a file
+proto-src/test.pb.cc.s:
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.s
+.PHONY : proto-src/test.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +216,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... proto-src/test.grpc.pb.o"
+	@echo "... proto-src/test.grpc.pb.i"
+	@echo "... proto-src/test.grpc.pb.s"
+	@echo "... proto-src/test.pb.o"
+	@echo "... proto-src/test.pb.i"
+	@echo "... proto-src/test.pb.s"
 .PHONY : help
 
 

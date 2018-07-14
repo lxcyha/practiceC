@@ -57,9 +57,26 @@ include CMakeFiles/testGrpc.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/testGrpc.dir/flags.make
 
+proto-src/test.pb.cc: ../test.proto
+proto-src/test.pb.cc: /usr/local/bin/protoc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running C++ protocol buffer compiler on /Users/cyh/CLionProjects/testGrpc/test.proto"
+	/usr/local/bin/protoc --cpp_out /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src -I /Users/cyh/CLionProjects/testGrpc /Users/cyh/CLionProjects/testGrpc/test.proto
+
+proto-src/test.pb.h: proto-src/test.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate proto-src/test.pb.h
+
+proto-src/test.grpc.pb.cc: ../test.proto
+proto-src/test.grpc.pb.cc: /usr/local/bin/protoc
+proto-src/test.grpc.pb.cc: /usr/local/bin/grpc_cpp_plugin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Running C++ gRPC compiler on /Users/cyh/CLionProjects/testGrpc/test.proto"
+	/usr/local/bin/protoc --grpc_out /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src -I /Users/cyh/CLionProjects/testGrpc --plugin=protoc-gen-grpc=/usr/local/bin/grpc_cpp_plugin /Users/cyh/CLionProjects/testGrpc/test.proto
+
+proto-src/test.grpc.pb.h: proto-src/test.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate proto-src/test.grpc.pb.h
+
 CMakeFiles/testGrpc.dir/main.cpp.o: CMakeFiles/testGrpc.dir/flags.make
 CMakeFiles/testGrpc.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testGrpc.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/testGrpc.dir/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testGrpc.dir/main.cpp.o -c /Users/cyh/CLionProjects/testGrpc/main.cpp
 
 CMakeFiles/testGrpc.dir/main.cpp.i: cmake_force
@@ -81,17 +98,80 @@ CMakeFiles/testGrpc.dir/main.cpp.o.provides: CMakeFiles/testGrpc.dir/main.cpp.o.
 CMakeFiles/testGrpc.dir/main.cpp.o.provides.build: CMakeFiles/testGrpc.dir/main.cpp.o
 
 
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o: CMakeFiles/testGrpc.dir/flags.make
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o: proto-src/test.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o -c /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.pb.cc
+
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.pb.cc > CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.i
+
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.pb.cc -o CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.s
+
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.requires:
+
+.PHONY : CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.requires
+
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.provides: CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.requires
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.provides.build
+.PHONY : CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.provides
+
+CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.provides.build: CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o
+
+
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o: CMakeFiles/testGrpc.dir/flags.make
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o: proto-src/test.grpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o -c /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.grpc.pb.cc
+
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.grpc.pb.cc > CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.i
+
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.grpc.pb.cc -o CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.s
+
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.requires:
+
+.PHONY : CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.requires
+
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.provides: CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.requires
+	$(MAKE) -f CMakeFiles/testGrpc.dir/build.make CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.provides.build
+.PHONY : CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.provides
+
+CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.provides.build: CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o
+
+
 # Object files for target testGrpc
 testGrpc_OBJECTS = \
-"CMakeFiles/testGrpc.dir/main.cpp.o"
+"CMakeFiles/testGrpc.dir/main.cpp.o" \
+"CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o" \
+"CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o"
 
 # External object files for target testGrpc
 testGrpc_EXTERNAL_OBJECTS =
 
 testGrpc: CMakeFiles/testGrpc.dir/main.cpp.o
+testGrpc: CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o
+testGrpc: CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o
 testGrpc: CMakeFiles/testGrpc.dir/build.make
+testGrpc: /usr/local/bin/../lib/libavcodec.a
+testGrpc: /usr/local/bin/../lib/libavfilter.a
+testGrpc: /usr/local/bin/../lib/libavdevice.a
+testGrpc: /usr/local/bin/../lib/libavutil.a
+testGrpc: /usr/local/bin/../lib/libswscale.a
+testGrpc: /usr/local/bin/../lib/libavformat.a
+testGrpc: /usr/local/bin/../lib/libswresample.a
+testGrpc: /usr/local/lib/libgrpc++_reflection.dylib
+testGrpc: /usr/local/lib/libprotobuf.dylib
+testGrpc: /usr/local/lib/libgrpc++.dylib
+testGrpc: /usr/local/lib/libgrpc.dylib
 testGrpc: CMakeFiles/testGrpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable testGrpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable testGrpc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testGrpc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +180,8 @@ CMakeFiles/testGrpc.dir/build: testGrpc
 .PHONY : CMakeFiles/testGrpc.dir/build
 
 CMakeFiles/testGrpc.dir/requires: CMakeFiles/testGrpc.dir/main.cpp.o.requires
+CMakeFiles/testGrpc.dir/requires: CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o.requires
+CMakeFiles/testGrpc.dir/requires: CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o.requires
 
 .PHONY : CMakeFiles/testGrpc.dir/requires
 
@@ -107,7 +189,10 @@ CMakeFiles/testGrpc.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/testGrpc.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/testGrpc.dir/clean
 
-CMakeFiles/testGrpc.dir/depend:
+CMakeFiles/testGrpc.dir/depend: proto-src/test.pb.cc
+CMakeFiles/testGrpc.dir/depend: proto-src/test.pb.h
+CMakeFiles/testGrpc.dir/depend: proto-src/test.grpc.pb.cc
+CMakeFiles/testGrpc.dir/depend: proto-src/test.grpc.pb.h
 	cd /Users/cyh/CLionProjects/testGrpc/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/cyh/CLionProjects/testGrpc /Users/cyh/CLionProjects/testGrpc /Users/cyh/CLionProjects/testGrpc/cmake-build-debug /Users/cyh/CLionProjects/testGrpc/cmake-build-debug /Users/cyh/CLionProjects/testGrpc/cmake-build-debug/CMakeFiles/testGrpc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/testGrpc.dir/depend
 

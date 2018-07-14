@@ -25,7 +25,6 @@ class RouteGuideImpl final : public testService::Service {
 void RunServer() {
     std::string server_address("0.0.0.0:50051");
     RouteGuideImpl service;
-
     ServerBuilder builder ;
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
     builder.RegisterService(&service);

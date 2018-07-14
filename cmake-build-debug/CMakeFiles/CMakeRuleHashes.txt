@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+677c7252e9336652ba8fbee856081729 proto-src/test.grpc.pb.cc
+039831f7077a4e3acfa0217207f2f3e5 proto-src/test.pb.cc

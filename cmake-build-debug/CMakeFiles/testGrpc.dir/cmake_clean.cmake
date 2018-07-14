@@ -1,5 +1,11 @@
 file(REMOVE_RECURSE
+  "proto-src/test.pb.cc"
+  "proto-src/test.pb.h"
+  "proto-src/test.grpc.pb.cc"
+  "proto-src/test.grpc.pb.h"
   "CMakeFiles/testGrpc.dir/main.cpp.o"
+  "CMakeFiles/testGrpc.dir/proto-src/test.pb.cc.o"
+  "CMakeFiles/testGrpc.dir/proto-src/test.grpc.pb.cc.o"
   "testGrpc.pdb"
   "testGrpc"
 )

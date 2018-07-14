@@ -4,8 +4,8 @@
 	<Project>
 		<Option title="testGrpc"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Modules\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug"/>
@@ -42,10 +42,11 @@
 				<Option working_dir="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
@@ -64,10 +65,11 @@
 				<Option working_dir="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
@@ -82,11 +84,32 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.grpc.pb.cc">
+			<Option target="testGrpc"/>
+		</Unit>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.grpc.pb.cc.rule">
+			<Option target="testGrpc"/>
+		</Unit>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.pb.cc">
+			<Option target="testGrpc"/>
+		</Unit>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake-build-debug/proto-src/test.pb.cc.rule">
+			<Option target="testGrpc"/>
+		</Unit>
 		<Unit filename="/Users/cyh/CLionProjects/testGrpc/main.cpp">
 			<Option target="testGrpc"/>
 		</Unit>
 		<Unit filename="/Users/cyh/CLionProjects/testGrpc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake/Modules/FindFFmpeg.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake/Modules/FindGRPC.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/cyh/CLionProjects/testGrpc/cmake/Modules/FindProtobuf.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
